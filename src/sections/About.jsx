@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative px-5 py-20 md:py-40 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white"
+      className="relative px-4 sm:px-6 py-16 sm:py-24 md:py-32 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white"
     >
       <GradientSpheres
         sphere1Class="about-gradient-sphere about-sphere-1"
@@ -23,14 +23,14 @@ const About = () => {
           text="Passionate Creator, Lifelong Learner"
         />
 
-        <div className="mt-12 md:mt-20 grid md:grid-cols-2 gap-10 items-center">
+        <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Panel */}
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-700 backdrop-blur-xl hover:shadow-blue-500/40 transition-shadow duration-500">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-700 backdrop-blur-xl hover:shadow-blue-500/40 transition-shadow duration-500">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Anand Kharane
             </h1>
 
-            <p className="text-gray-300 md:text-lg text-sm mt-4 leading-relaxed transition-opacity duration-500 ease-out opacity-100">
+            <p className="text-gray-300 text-sm sm:text-base md:text-lg mt-4 leading-relaxed transition-opacity duration-500 ease-out opacity-100">
               Hi, I'm Anand Kharane, an engineering student at IIT Jodhpur,
               passionate about building and scaling web applications. I
               specialize in full-stack development, delivering clean, responsive
@@ -39,13 +39,9 @@ const About = () => {
             </p>
 
             {/* Tech Tags */}
-            <div className="flex flex-wrap gap-4 mt-6">
-              <span className="bg-blue-600 text-white font-medium px-4 py-2 rounded-lg shadow hover:scale-110 hover:bg-blue-700 transition-all backdrop-blur-sm">
-                Full Stack Developer
-              </span>
-              <span className="bg-purple-600 text-white font-medium px-4 py-2 rounded-lg shadow hover:scale-110 hover:bg-purple-700 transition-all backdrop-blur-sm">
-                App Developer
-              </span>
+            <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
+              <Tag text="Full Stack Developer" bg="bg-blue-600" />
+              <Tag text="App Developer" bg="bg-purple-600" />
             </div>
 
             <hr className="my-6 border-gray-600" />
@@ -80,7 +76,6 @@ const About = () => {
 
             {/* Resume Button */}
             <hr className="my-6 border-gray-600" />
-
             <div className="flex justify-center">
               <button
                 onClick={() =>
@@ -89,7 +84,7 @@ const About = () => {
                     "_blank"
                   )
                 }
-                className="mt-6 px-6 py-3 flex items-center justify-center gap-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 focus:ring-4 focus:ring-green-400"
+                className="mt-4 sm:mt-6 px-6 py-3 flex items-center justify-center gap-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-600 hover:scale-105 transition-all duration-300 focus:ring-4 focus:ring-green-400"
               >
                 <span>📄</span> View Resume
               </button>
@@ -97,8 +92,7 @@ const About = () => {
           </div>
 
           {/* Right Panel - Image */}
-
-          <div className="w-full h-full max-w-[500px]">
+          <div className="w-full h-full max-w-[450px] sm:max-w-[500px] mx-auto md:mx-0">
             <AboutRight />
           </div>
         </div>
@@ -107,18 +101,27 @@ const About = () => {
   );
 };
 
+// Tag component
+const Tag = ({ text, bg }) => (
+  <span
+    className={`text-xs sm:text-sm ${bg} text-white font-medium px-4 py-2 rounded-lg shadow hover:scale-105 hover:brightness-110 transition-all backdrop-blur-sm`}
+  >
+    {text}
+  </span>
+);
+
 // Reusable Contact Link
 const ContactLink = ({ icon, label, href, bg }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className={`flex items-center gap-4 px-4 py-3 rounded-xl ${bg} bg-opacity-20 hover:bg-opacity-40 transition duration-300 shadow-md hover:scale-110 group`}
+    className={`flex items-center gap-4 px-4 py-3 rounded-xl ${bg} bg-opacity-20 hover:bg-opacity-40 transition duration-300 shadow-md hover:scale-105 group`}
   >
-    <div className="text-white text-xl transition-transform duration-300 group-hover:rotate-6">
+    <div className="text-white text-lg sm:text-xl transition-transform duration-300 group-hover:rotate-6">
       {icon}
     </div>
-    <span className="font-medium text-white group-hover:underline">
+    <span className="font-medium text-white text-sm sm:text-base group-hover:underline">
       {label}
     </span>
   </a>
