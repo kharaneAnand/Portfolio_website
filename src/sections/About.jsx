@@ -85,7 +85,7 @@ const About = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1XUsFN7__kXRpIG9h8GQopGCfOu0ZwasW/view?usp=drive_link",
+                    "https://drive.google.com/file/d/13P19zGV7Qpden8YXEfwCvGmmpSg5Mc5Y/view?usp=drive_link",
                     "_blank"
                   )
                 }
