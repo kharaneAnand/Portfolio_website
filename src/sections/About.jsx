@@ -23,7 +23,7 @@ const About = () => {
           text="Passionate Creator, Lifelong Learner"
         />
 
-        <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Left Panel */}
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-700 backdrop-blur-xl hover:shadow-blue-500/40 transition-shadow duration-500">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
