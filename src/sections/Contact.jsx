@@ -39,8 +39,8 @@ const Contact = () => {
             </motion.h3>
 
             <p className="text-center text-gray-300 text-lg leading-relaxed mb-8">
-              Interested in working together, starting a project, or just want
-              to say hi? I'm all ears. Let's create something amazing!
+              Let’s turn ideas into impact. Big or small, every project starts
+              with a “Hey!”
             </p>
 
             {/* Email CTA */}
