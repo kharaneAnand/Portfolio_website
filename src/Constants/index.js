@@ -65,7 +65,7 @@ const webAndAppDev = [
   },
   {
     name: "Express",
-    image: "/IconsImages/Express.svg",
+    image: "/IconsImages/Express.png",
   },
   {
     name: "TypeScript",
@@ -81,7 +81,7 @@ const webAndAppDev = [
   },
   {
     name:"Next.js",
-    image: "/IconsImages/Next.js.svg",
+    image: "/IconsImages/Nextjs.png",
   },
   {
     name: "Tailwind CSS",
@@ -113,7 +113,7 @@ const webAndAppDev = [
   },
   {
     name: "Three.js",
-    image: "/IconsImages/Threejs.svg",
+    image: "/IconsImages/threejs.svg",
   },
   {
     name:"Django",
@@ -128,7 +128,7 @@ const Tools = [
   },
   {
     name:"GitHub",
-    image:"/IconsImages/github.png",
+    image:"/IconsImages/github1.png",
   },
   {
     name:"VsCode",
