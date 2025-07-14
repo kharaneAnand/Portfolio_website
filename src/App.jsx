@@ -10,6 +10,7 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import AllSkills from "./Components/AllSkills";
 import Loader from "./Components/Loader";
+import AllProjects from "./Components/AllProjects";
 
 // Home Layout
 const Home = () => {
@@ -18,9 +19,16 @@ const Home = () => {
 
   useEffect(() => {
     if (location.state?.fromSkills) {
-      setTimeout(() => {
-        techStackEndRef.current?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
+      const timeout = setTimeout(() => {
+        if (techStackEndRef.current) {
+          techStackEndRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center", // scrolls to center of viewport
+          });
+        }
+      }, 1300); // increased delay to ensure page has settled
+
+      return () => clearTimeout(timeout);
     }
   }, [location]);
 
@@ -43,6 +51,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/skills" element={<AllSkills />} />
+      <Route path="/projects/all" element={<AllProjects />} />
     </Routes>
   );
 };

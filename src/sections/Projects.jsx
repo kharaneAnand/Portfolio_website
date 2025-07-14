@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import TitleHeader from "../Components/TitleHeader";
 import { projects } from "../Constants/projects";
 import GradientSpheres from "../Components/GradientSpeheres";
+import { useNavigate } from "react-router-dom";
 
 const slideVariants = {
   initial: { opacity: 0, y: 30 },
@@ -14,6 +15,7 @@ const slideVariants = {
 const Projects = () => {
   const [current, setCurrent] = useState(0);
   const totalProjects = projects.length;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -145,6 +147,26 @@ const Projects = () => {
                 }`}
               ></div>
             ))}
+          </div>
+
+          <div className="mt-10 flex justify-center relative z-10">
+            <button
+              onClick={() => navigate("/projects/all")}
+              className="group flex items-center gap-3 px-6 py-3 border border-white rounded-full text-white
+  hover:bg-white hover:text-black 
+  focus:bg-white focus:text-black 
+  active:bg-white active:text-black 
+  transition-all duration-100"
+            >
+              <span className="text-lg font-semibold">
+                Explore All Projects
+              </span>
+              <img
+                src="/images/CaretRight.svg"
+                alt="Right Arrow"
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              />
+            </button>
           </div>
 
           <div className="w-full h-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 mt-8 mb-12 animate-pulse opacity-80" />

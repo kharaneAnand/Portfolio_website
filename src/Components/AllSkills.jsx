@@ -3,10 +3,15 @@ import { useNavigate } from "react-router-dom";
 import TitleHeader from "./TitleHeader";
 import TechIcon from "./TechIcon";
 import { programmingLang, webAndAppDev, Tools } from "../Constants";
-import { IoMdClose } from "react-icons/io"; // close icon
+import { IoMdClose } from "react-icons/io";
+import { useEffect } from "react";
 
 const AllSkills = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div className="relative min-h-screen px-5 py-20 md:py-32 text-white bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] overflow-hidden">
